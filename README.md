@@ -73,6 +73,7 @@ bash
 Copy
 Edit
 docker run --env-file=config.env s3-to-rds-app
+
 🚦 Application Flow
 mermaid
 Copy
@@ -84,6 +85,7 @@ flowchart TD
     C -->|Failure| E[Trigger AWS Glue Job]
     E --> F[Log Glue Trigger Status]
     F --> G[Exit]
+
 ✅ Success Criteria
 If the CSV is successfully ingested into RDS → logs success.
 
